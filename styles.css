@@ -1,0 +1,165 @@
+:root{
+    font-family:'Roboto','Arial';
+}
+
+html,
+body{
+    margin:0px;
+    height:100%
+}
+
+#grid-container{
+    height:100%;
+    display:grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+#sidebar{
+    background-color:#818cf8;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    align-items: start;
+    /* grid-template-rows: auto; */
+    padding:1.5rem;
+    font-size: 1.5rem;
+
+}
+
+#header{
+    background-color: white;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    box-shadow: 0px 1px 4px rgb(0,0,0,0.5);
+    z-index: 1;
+    padding:0.5rem 2rem;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    
+}
+
+#main-content{
+    background-color: #eff6ff;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.logo img{
+    filter: invert();
+    height:3.5rem
+}
+
+.navigation img, .settings img{
+    filter: invert();
+    height:1.8rem
+}
+
+.logo,.navigation,.settings{
+    color:white;
+    font-weight: bold;
+    display:grid;
+    grid-template-columns: 4rem 1fr;
+    margin-bottom:3rem
+    
+}
+#sidebar p, #sidebar img{
+    margin:0.5rem 0
+}
+#sidebar img{
+    justify-self: center;
+}
+#sidebar p{
+    align-self: center;
+}
+
+
+
+.top-left{
+    
+    display:grid;
+    grid-template-columns: auto 1fr;
+    gap:10px;
+    align-items: center;
+}
+.top-left img{
+    height:1.5rem;
+}
+
+.top-left input{
+    border:none;
+    background-color:#e2e8f0;
+    height:1.5rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+    max-width: 30rem;
+}
+
+.bottom-left{
+    display:grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+
+}
+.bottom-left img{
+    height:4rem;
+    grid-row: 1/3;
+    align-self: center;
+    margin-left:-10px;
+    margin-right: 10px;
+}
+
+.bottom-left p{
+    margin:0.1rem
+}
+
+#greetings{
+    align-self: end;
+    font-size: 0.8rem;
+}
+
+#name{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.top-right{
+    display:grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap:2rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+
+}
+.top-right img {
+    height:2rem;
+}
+
+#bell{
+    height:1rem;
+    justify-self: end;
+    margin:0
+}
+
+.bottom-right{
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-template-rows: auto;
+    gap:1rem;
+    align-items: center;
+    justify-items: end;
+}
+
+.bottom-right button{
+    border:none;
+    background-color: #818cf8;
+    height: 2rem;
+    width:5rem;
+    border-radius: 15px;
+    
+}
