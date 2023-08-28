@@ -47,6 +47,9 @@ body{
     background-color: #eff6ff;
     grid-column: 2/3;
     grid-row: 2/3;
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr
 }
 
 .logo img{
@@ -134,7 +137,6 @@ body{
     gap:2rem;
     font-weight: bold;
     font-size: 1.2rem;
-
 }
 .top-right img {
     height:2rem;
@@ -144,6 +146,10 @@ body{
     height:1rem;
     justify-self: end;
     margin:0
+}
+
+.top-right p:hover, .top-right img:hover{
+    cursor: pointer;
 }
 
 .bottom-right{
@@ -161,5 +167,111 @@ body{
     height: 2rem;
     width:5rem;
     border-radius: 15px;
+    color:white;
+    font-weight: bold;
+    box-shadow: 0 1px 2px black; 
+}
+
+
+.bottom-right button:active{
+    transform:scale(0.98)
+}
+
+.bottom-right button:hover{
+    cursor: pointer;
+}
+
+
+
+.projects{
+    grid-row:1/3;
+    padding:1rem;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(50%,1fr));
+    grid-template-rows: auto 1fr 1fr 1fr;
+    gap:1rem
+}
+
+.projects > p:first-child,
+.announcements > p:first-child,
+.trending > p:first-child{
+    grid-column: 1/3;
+    font-weight: bold;
+    margin:0;
+    font-size: 1.5rem;
+}
+
+.card{
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgb(0,0,0,0.5);
+    padding: 1.5rem 2rem;
+    font-weight: bold;
+    font-size: 1rem;
     
 }
+
+.projects .card{
+    border-left: 5px solid #818cf8;
+
+}
+
+.card p:last-child{
+    color:grey;
+    font-weight: 400;
+}
+
+.projects .project-name{
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.announcements{
+    padding: 1rem;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    row-gap: 1rem;
+}
+
+.announcements .card{
+    padding:1rem;
+    display:grid;
+    /* gap:1rem; */
+    /* grid-template-rows: repeat(auto-fit); */
+    align-items: center;
+
+}
+
+.announcements p{
+    margin:0;
+    font-size:0.8rem;
+    margin-top:0.2rem
+}
+
+.announcements .announcement-name{
+    margin:0;
+    font-size:1rem
+}
+
+.card > div{
+    margin:0;
+
+}
+
+hr{
+    width:100%;
+    border-top:1px solid rgb(0,0,0,0.2)
+}
+
+.trending{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    padding:1rem;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    row-gap: 1rem;
+
+}
+
